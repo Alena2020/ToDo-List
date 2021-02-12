@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <div class="header">
+    <div class="container">
+      <div class="logo">To Do List</div>
+      <div class="form">
+        <input type="text" v-bind:value="valueInput"  v-on:input="handlyInput"  v-on:keypress.enter="addTask">
+        <button class="btn" v-on:click="addTask">Add a new task</button>
+      </div>
+      <!-- /.form -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.header -->
+  <div class="container">
+    <h2>
+      <span>To Do</span>
+      <span class="mask-num">{{needDoList.length}}</span>
+    </h2>
+    <ul class="mask-list">
+      <li v-for="(mask, index) in needDoList" :key="mask.id">
+        <div>
+          <input type="checkbox" v-on:change="doCheck(index, 'need')">
+          <span>{{mask.title}}</span>
+        </div>
+        <button class="btn-remove" v-on:click="removeMask(index, 'need')">Remove</button>
+      </li>
+    </ul>
+    <h2>
+      <span>Done</span>
+      <span class="mask-num">{{completeList.length}}</span>
+    </h2>
+    <ul class="mask-list complete-list">
+      <li v-for="(mask, index) in completeList" :key="mask.id">
+        <div>
+          <input type="checkbox" v-on:change="doCheck(index, 'complete')" checked>
+          <span>{{mask.title}}</span>
+        </div>
+        <button class="btn-remove" v-on:click="removeMask(index, 'complete')">Remove</button>
+      </li>
+    </ul>
+  </div>
+  <!-- /.container -->
+  <div class="container">
+    <div class="remember">
+       <img src="img/lotus.png" class="lotus-img" alt="lotus">
+ <div class="card">
+      <div class="card-body">
+        
+        <p class="mb-0">
+          <a data-fancybox data-src="#trueModal" data-modal="true" href="javascript:;" class="btn btn-primary">Remember</a>
+        </p>
+
+        <div style="display: none;max-width:600px;" id="trueModal">
+          <h2>Dear friend!</h2>
+          <p>Become the best version of yourself.</p>
+          <p>Dreams come true!</p>
+           <img src="img/lotus.png" class="lotus-img" alt="lotus">
+          <p><button data-fancybox-close class="btn">Close me</button></p>
+        </div>
+      </div>
+    </div>
+ 
+    </div> 
+         <!-- /.remember -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /#app -->
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

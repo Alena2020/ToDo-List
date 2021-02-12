@@ -1,0 +1,141 @@
+body {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 30px;
+  background-color: lightskyblue;
+}
+
+p {
+  color: midnightblue;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin: 20px 0;
+  color: midnightblue;
+  text-shadow: 0 0 2px white, -1px -1px 0 white, -3px -3px 1px white,
+    -2px -2px 2px magenta;
+  border-bottom: 1px solid mediumblue;
+}
+
+h2 .mask-num {
+  border: 1px solid mediumblue;
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px midnightblue, 0 0 20px midnightblue;
+  text-shadow: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+h2 .mask-num:hover {
+  background-color: #0dd6f8;
+  border-color: aqua;
+}
+
+.container {
+  width: 900px;
+  padding: 0 200px;
+  margin: 0 auto;
+}
+.header {
+  background-color: mediumblue;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: cyan;
+  text-shadow: 0 0 2px white, -1px -1px 0 white, -3px -3px 1px white,
+    -2px -2px 2px magenta;
+}
+
+.header .container .logo {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: cyan;
+  color: #fff;
+
+  text-shadow: 0 0 2px mediumblue, -1px -1px 0 mediumblue,
+    -2px -2px 1px mediumblue, -2px -2px 2px magenta;
+
+  border: 3px solid midnightblue;
+  border-radius: 25px;
+  box-shadow: 5px 5px 35px midnightblue, 0 0 35px midnightblue;
+  padding: 10px 30px;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0dd6f8;
+  border-color: aqua;
+}
+
+.mask-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-remove {
+  margin: 5px;
+  background-color: cyan;
+  color: #fff;
+  text-shadow: 0 0 2px mediumblue, -1px -1px 0 mediumblue,
+    -2px -2px 1px mediumblue, -2px -2px 2px magenta;
+
+  border: 3px solid midnightblue;
+  border-radius: 25px;
+  box-shadow: 5px 5px 35px midnightblue, 0 0 35px midnightblue;
+  padding: 10px 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn-remove:hover {
+  background-color: #0dd6f8;
+  border-color: aqua;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+#trueModal h2 {
+  display: block;
+  text-align: center;
+}
+
+#trueModal {
+  border: 5px solid midnightblue;
+  border-radius: 25px;
+  box-shadow: 0 0 60px midnightblue inset;
+  text-align: center;
+}
+
+.lotus-img {
+  width: 150px;
+  height: 150px;
+}
+
+input[type="checkbox"] + span {
+  padding-left: 10px;
+  color: midnightblue;
+}
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+  width: 20px;
+  height: 20px;
+}
