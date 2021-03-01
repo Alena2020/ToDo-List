@@ -6,3 +6,4 @@
 #### - CSS 
 #### - JavaScript
 #### - VueJS 3
+#### - Fancybox
