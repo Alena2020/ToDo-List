@@ -1,7 +1,6 @@
-# ToDo-List - yчебный проект 
-### Выполнила проект: Алёна
+# ToDo-List - project
 
-## Технологии:
+## Technologies:
 #### - HTML
 #### - CSS 
 #### - JavaScript
